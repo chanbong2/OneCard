@@ -12,3 +12,5 @@ Card::Card(int suit, int number, int color, int skill)
     this->cardColor = color;
     this->cardSkill = skill;
 }
+
+bool Card::isValidCard()

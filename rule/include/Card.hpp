@@ -20,7 +20,11 @@ public:
     Card();
     Card(int cardSuit, int cardNumber, int cardColor, int cardSkill);
 
-    int whichSkill
+    bool isValidCard();
+        bool hasSKill();
+            bool isAttack();
+            bool isDefend();
+            bool isChangeSuit();
 };
 
 #endif //CARD_HPP

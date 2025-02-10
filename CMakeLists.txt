@@ -21,7 +21,9 @@ project(GAME)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_subdirectory(RULE)
+add_subdirectory(
+        rule
+    )
 
 
 add_executable(GAME
