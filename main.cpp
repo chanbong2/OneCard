@@ -4,8 +4,9 @@
 
 class Game {
 private:
-    //deck
-    //open
+    // deck
+    // open
+    // turn?
     int currentTurn;
 
 public:
