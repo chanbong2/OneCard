@@ -1,37 +1,17 @@
 #include <iostream>
-#include <vector>
-#include <deque>
+#include "Card.h"
+#include "rule/include/Game.hpp"
+#include "Player1.h"
+#include "Player2.h"
 
-class Game {
-private:
-    // deck
-    // open
-    // turn?
-    int currentTurn;
+using namespace std;
 
-public:
-    Game();
+int main() {
+    Game game;
 
-    // start game
-    void shuffleDeck();
-    void dealCard(); // forceDrawCard로 표현 가능
-    void setOpen();
-    void startLoop();
-    void forceDrawCard(int drawNumber);
+    game.start();
 
-    void printCurrentPlayer();
-    void printTurnNumber();
-    bool playAvailable();
-    void checkValidCard();
-    void checkSpecialCard();
-        void changeSuit();
-        void attack(); // forceDrawCard로 표현 가능
-        void colorJoker();
-        void blackJoker();
-    bool isWin();
-    void passTurn();
+    game.displayResults();
 
-    void printResult();
-
-
-};
+    return 0;
+}
