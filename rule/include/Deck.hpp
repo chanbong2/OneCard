@@ -22,7 +22,7 @@ class Deck {
     void shuffleDeck();
     int remainCards();
     bool isEmpty();
-    void refillDeck(std::vector<Card>& topCard);
+    void refillDeck(Card& topCard);
 
 };
 

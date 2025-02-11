@@ -11,7 +11,7 @@ int main() {
 
     game.start();
 
-    game.displayResults();
+    game.printResult();
 
     return 0;
 }
