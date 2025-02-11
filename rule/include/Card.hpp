@@ -20,6 +20,9 @@ class Card {
     Card();
     Card(cardSuit suit, cardNumber number, cardColor color, cardSkill skill);
 
+    // 문득 든 생각인데
+    // Card 클래스에 isValid, isSpecial, isAttack 등의 메소드를 추가하는게 맞나?
+    // 이건여기서 판단할 문제가 아니라, Player가 판단해야 할 문제 아닌가?
 
     bool isValidCard(Card& topcard);
     bool isSpecialCard();
