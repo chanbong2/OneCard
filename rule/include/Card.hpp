@@ -11,14 +11,15 @@
 #include "Game.hpp"
 
 class Card {
-public:
-    enum cardSuit;
-    enum cardNumber;
-    enum cardColor;
-    enum cardSkill;
+    public:
+    cardSuit suit;
+    cardNumber number;
+    cardColor color;
+    cardSkill skill;
 
     Card();
-    Card(int cardSuit, int cardNumber, int cardColor, int cardSkill);
+    Card(cardSuit suit, cardNumber number, cardColor color, cardSkill skill);
+
 
     bool isValidCard(Card& topcard);
     bool isSpecialCard();

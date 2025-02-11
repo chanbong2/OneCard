@@ -5,36 +5,30 @@
 #include "Card.hpp"
 #include <iostream>
 
-Card::Card(int suit, int number, int color, int skill)
-{
-    this->cardSuit = suit;
-    this->cardNumber = number;
-    this->cardColor = color;
-    this->cardSkill = skill;
-}
+Card::Card(cardSuit suit, cardNumber number, cardColor color, cardSkill skill)
+    : suit(suit), number(number), color(color), skill(skill) {}
 
 bool Card::isValidCard(Card& topcard) {
-    if (this->cardSuit == topcard.cardSuit) return true;
-    if (this->cardNumber == topcard.cardNumber) return true;
-    if (this->cardNumber == JOKER && this->cardColor == RED && topcard.cardColor == RED) return true;
-    if (this->cardNumber == JOKER && this->cardColor == BLACK && topcard.cardColor == BLACK) return truel
+    if (suit == topcard.suit) return true;
+    if (number == topcard.number) return true;
+    if (number == JOKER && color == RED && topcard.color == RED) return true;
+    if (number == JOKER && color == BLACK && topcard.color == BLACK) return true;
 
-    else return false;
+    return false;
 }
 
 bool Card::isSpecialCard() {
-    if (this->cardSkill == NONE) return false;
-    else return true;
+    return skill != NONE;
 }
 
 bool Card::isAttack() {
-    if (this->cardSkill == ATTACK) return true;
+    return skill == ATTACK;
 }
 
 bool Card::isDefend() {
-    if (this->cardSkill == DEFEND) return true;
+    return skill == DEFEND;
 }
 
 bool Card::isChangeSuit() {
-    if (this->cardSkill == ) return true;
+    return number == SEVEN;
 }
