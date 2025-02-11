@@ -12,19 +12,19 @@
 
 class Card {
 public:
-    int cardSuit;
-    int cardNumber;
-    int cardColor;
-    int cardSkill;
+    enum cardSuit;
+    enum cardNumber;
+    enum cardColor;
+    enum cardSkill;
 
     Card();
     Card(int cardSuit, int cardNumber, int cardColor, int cardSkill);
 
-    bool isValidCard();
-        bool hasSKill();
-            bool isAttack();
-            bool isDefend();
-            bool isChangeSuit();
+    bool isValidCard(Card& topcard);
+    bool isSpecialCard();
+    bool isAttack();
+    bool isDefend();
+    bool isChangeSuit();
 };
 
 #endif //CARD_HPP
